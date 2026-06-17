@@ -1,0 +1,14 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey", "good morning"],
+      "responses": ["Hello! How can I help?", "Hi there! What can I do for you?"]
+    },
+    {
+      "tag": "creator",
+      "patterns": ["who made you", "who created you"],
+      "responses": ["I was made by The deepankur! 🎉"]
+    }
+  ]
+}
