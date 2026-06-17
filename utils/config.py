@@ -3,6 +3,14 @@
 CHATBOT_NAME = "Family AI Chatbot"
 CREATOR_NAME = "The deepankur"
 
+# Family Information
+FAMILY_MEMBERS = {
+    "mother": "Neelima Mehra",
+    "sister": "Ridhii",
+    "father": "Gaurav Mehra",
+    "grandmother": "Rashmi Mehra"
+}
+
 # Intents and responses
 INTENTS = {
     "greeting": {
@@ -30,6 +38,38 @@ INTENTS = {
             "The deepankur created me! 👨‍💻",
             "I was built by The deepankur. Isn't he amazing? 😊",
             "The deepankur is my creator! Check out his GitHub: https://github.com/deepankur-06"
+        ]
+    },
+    "deepankur_mother": {
+        "patterns": ["who is deepankur's mother", "deepankur mother", "deepankur's mom", "deepankur mom", "who is his mother"],
+        "responses": [
+            "Deepankur's mother is Neelima Mehra! 👩",
+            "His mother is Neelima Mehra.",
+            "That's Neelima Mehra, a wonderful person!"
+        ]
+    },
+    "deepankur_sister": {
+        "patterns": ["who is deepankur's sister", "deepankur sister", "deepankur's sister", "who is his sister"],
+        "responses": [
+            "Deepankur's sister is Ridhii! 👧",
+            "His sister is Ridhii.",
+            "That's Ridhii, his amazing sister!"
+        ]
+    },
+    "deepankur_father": {
+        "patterns": ["who is deepankur's father", "deepankur father", "deepankur's dad", "deepankur dad", "who is his father"],
+        "responses": [
+            "Deepankur's father is Gaurav Mehra! 👨",
+            "His father is Gaurav Mehra.",
+            "That's Gaurav Mehra, a great person!"
+        ]
+    },
+    "deepankur_grandmother": {
+        "patterns": ["who is deepankur's grandmother", "deepankur grandmother", "deepankur's grandma", "deepankur grandma", "who is his grandmother"],
+        "responses": [
+            "Deepankur's grandmother is Rashmi Mehra! 👵",
+            "His grandmother is Rashmi Mehra.",
+            "That's Rashmi Mehra, his wonderful grandmother!"
         ]
     },
     "name": {
