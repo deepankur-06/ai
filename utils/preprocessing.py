@@ -1,18 +1,4 @@
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
 import string
-
-# Download required NLTK data
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords')
 
 def preprocess_text(text):
     """
@@ -20,7 +6,6 @@ def preprocess_text(text):
     - Converting to lowercase
     - Removing punctuation
     - Tokenizing
-    - Removing stopwords
     """
     # Convert to lowercase
     text = text.lower()
@@ -28,12 +13,8 @@ def preprocess_text(text):
     # Remove punctuation
     text = text.translate(str.maketrans('', '', string.punctuation))
     
-    # Tokenize
-    tokens = word_tokenize(text)
-    
-    # Remove stopwords
-    stop_words = set(stopwords.words('english'))
-    tokens = [token for token in tokens if token not in stop_words and token.strip()]
+    # Split into tokens
+    tokens = text.split()
     
     return tokens
 
@@ -58,7 +39,7 @@ def calculate_similarity(tokens1, tokens2):
 
 def tokenize_text(text):
     """Simple tokenization"""
-    return word_tokenize(text.lower())
+    return text.lower().split()
 
 def remove_punctuation(text):
     """Remove punctuation from text"""
